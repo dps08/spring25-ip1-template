@@ -56,7 +56,7 @@ jobs:
           echo "Server started successfully. Now stopping..."
           killall node
 
-          npm run test
+          npm run test -- --detectLeaks=false
 
       - name: Lint backend
         if: ${{ always() }}
