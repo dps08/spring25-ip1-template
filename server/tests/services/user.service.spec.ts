@@ -32,7 +32,7 @@ describe('User model', () => {
       expect(savedUser.dateJoined).toBeDefined();
     });
 
-    it.skip('should return error when username already exists', async () => {
+    it('should return error when username already exists', async () => {
       mockingoose(UserModel).toReturn(user, 'findOne');
 
       const result = await saveUser(user);
