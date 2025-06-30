@@ -45,7 +45,7 @@ describe('User model', () => {
 
     it('should handle database errors', async () => {
       mockingoose(UserModel).toReturn(null, 'findOne');
-      mockingoose(UserModel).toReturn(new Error('Database error'), 'create');
+      mockingoose(UserModel).toReturn(Error('Database error'), 'create');
 
       const result = await saveUser(user);
 
