@@ -1,0 +1,4 @@
+{
+    "jest.rootPath": "./server",
+    "jest.jestCommandLine": "npx jest"
+  }
