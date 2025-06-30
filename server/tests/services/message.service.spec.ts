@@ -36,7 +36,7 @@ describe('Message model', () => {
     });
 
     it('should return error when save fails', async () => {
-      mockingoose(MessageModel).toReturn(Error('Database error'), 'create');
+      mockingoose(MessageModel).toReturn(new Error('Database error'), 'save');
 
       const result = await saveMessage(message1);
 
